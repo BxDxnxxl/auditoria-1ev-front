@@ -1,0 +1,183 @@
+/* Variables */
+@import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: $text-color;
+    background-color: $secondary-color;
+}
+
+// Estilo del resumen de compra
+.resumen-compra {
+  display: flex;
+  justify-content: center; // Centrar el resumen en el medio
+  align-items: center;
+  padding: 20px;
+
+  &__container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #ffffff; // Fondo blanco SOLO para el cuadro
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+  }
+
+  &__image {
+      width: 120px;
+      height: auto;
+      border-radius: 5px;
+      object-fit: cover;
+  }
+
+  &__details {
+      flex: 1;
+
+      &__title {
+          font-size: 24px; // Tamaño en px
+          color: #333;
+          margin-bottom: 10px;
+      }
+
+      &__info {
+          font-size: 16px;
+          color: #555;
+          margin-bottom: 5px;
+
+          strong {
+              color: #333;
+          }
+      }
+
+      &__price {
+          font-weight: bold;
+          font-size: 18px;
+          color: #28a745; // Color verde para destacar el precio
+      }
+  }
+}
+
+// Estilo del formulario de pago
+.pago-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff; // Fondo blanco para el cuadro
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto; // Centrar el contenedor en el medio
+
+  &__title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  &__content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+          flex-direction: column;
+      }
+
+      .pago__tarjeta, .pago__contacto {
+          flex: 1;
+          background-color: #f8f9fa; // Fondo gris claro dentro del cuadro
+          padding: 20px;
+          border-radius: 5px;
+      }
+
+      .pago__title {
+          font-size: 18px;
+          color: #333;
+          margin-bottom: 15px;
+          text-align: center;
+      }
+
+      .form-group {
+          margin-bottom: 15px;
+
+          label {
+              display: block;
+              font-size: 14px;
+              color: #555; // Color general de las etiquetas
+              margin-bottom: 5px;
+          }
+
+          input {
+              width: 100%;
+              padding: 10px;
+              font-size: 14px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+
+              &:focus {
+                  outline: none;
+                  border-color: #007bff;
+              }
+          }
+      }
+
+      .form-row {
+          display: flex;
+          gap: 10px;
+
+          .form-column {
+              flex: 1;
+
+              label {
+                  font-size: 14px;
+                  color: #222; // Color más oscuro para etiquetas pequeñas como Fecha de caducidad y CVV
+                  margin-bottom: 5px;
+              }
+
+              input {
+                  width: 100%;
+              }
+          }
+      }
+  }
+
+  &__actions {
+      text-align: center;
+      margin-top: 20px;
+
+      .pagar-btn, .cancelar-btn {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 150px; // Uniforme tamaño para ambos botones
+          margin: 0 10px; // Espaciado entre botones
+      }
+
+      .pagar-btn {
+          background-color: #28a745; // Verde para confirmar pago
+          color: #ffffff;
+
+          &:hover {
+              background-color: #218838;
+          }
+      }
+
+      .cancelar-btn {
+          background-color: #dc3545; // Rojo para cancelar pago
+          color: #ffffff;
+
+          &:hover {
+              background-color: #c82333;
+          }
+      }
+  }
+}

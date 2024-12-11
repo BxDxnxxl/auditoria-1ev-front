@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Header */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* Footer */
+/* Cambiado a blanco */
+/* Main */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* AboutUs */
+/* Movies */
+/* DetallePeliculas */
+/* PasarelaPago */
+/* ReservaAsiento */
+/* Ticket */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Por defecto, disposición vertical */
+  width: 100%;
+  background-color: #000;
+  color: #ffffff;
+  padding: 0px;
+  /* Estilos específicos para pantallas pequeñas */
+}
+.footer hr {
+  width: 100%;
+}
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer__credits__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__credits__logo img {
+  width: 50px;
+  margin-bottom: 5px;
+}
+.footer__credits__logo p {
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+.footer__credits__copyright p {
+  font-style: italic;
+  font-size: 12px;
+  color: #ffffff;
+  margin: 5px 0 0;
+}
+.footer__navs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automático */
+  gap: 10px; /* Espaciado entre los elementos */
+  text-align: center;
+}
+.footer__navs__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #E7EAEF;
+  background-color: #000;
+}
+.footer__navs__item p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .footer__credits {
+    margin-bottom: 15px;
+  }
+  .footer__navs {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Más compacto */
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

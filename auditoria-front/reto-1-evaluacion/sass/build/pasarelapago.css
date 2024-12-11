@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Header */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* Footer */
+/* Cambiado a blanco */
+/* Main */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* AboutUs */
+/* Movies */
+/* DetallePeliculas */
+/* PasarelaPago */
+/* ReservaAsiento */
+/* Ticket */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background-color: #000;
+}
+
+.resumen-compra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.resumen-compra__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+.resumen-compra__image {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.resumen-compra__details {
+  flex: 1;
+}
+.resumen-compra__details__title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.resumen-compra__details__info {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+.resumen-compra__details__info strong {
+  color: #333;
+}
+.resumen-compra__details__price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #28a745;
+}
+
+.pago-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+.pago-container__title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.pago-container__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .pago-container__content {
+    flex-direction: column;
+  }
+}
+.pago-container__content .pago__tarjeta, .pago-container__content .pago__contacto {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+}
+.pago-container__content .pago__title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.pago-container__content .form-group {
+  margin-bottom: 15px;
+}
+.pago-container__content .form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+.pago-container__content .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.pago-container__content .form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.pago-container__content .form-row {
+  display: flex;
+  gap: 10px;
+}
+.pago-container__content .form-row .form-column {
+  flex: 1;
+}
+.pago-container__content .form-row .form-column label {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 5px;
+}
+.pago-container__content .form-row .form-column input {
+  width: 100%;
+}
+.pago-container__actions {
+  text-align: center;
+  margin-top: 20px;
+}
+.pago-container__actions .pagar-btn, .pago-container__actions .cancelar-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  margin: 0 10px;
+}
+.pago-container__actions .pagar-btn {
+  background-color: #28a745;
+  color: #ffffff;
+}
+.pago-container__actions .pagar-btn:hover {
+  background-color: #218838;
+}
+.pago-container__actions .cancelar-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+.pago-container__actions .cancelar-btn:hover {
+  background-color: #c82333;
+}
+
+/*# sourceMappingURL=pasarelapago.css.map */

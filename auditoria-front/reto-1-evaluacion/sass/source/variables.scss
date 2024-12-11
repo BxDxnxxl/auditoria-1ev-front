@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Header */
+$primary-color: #fff;
+$secondary-color: #000;
+$text-color: #E7EAEF;
+/* Color de texto para el footer */
+$header-bg-color: rgba(0, 0, 0, 0.6);
+/* Fondo negro semitransparente */
+$footer-bg-color: #000;
+/* Fondo del footer igual al de la página */
+$border-color: #E7EAEF;
+/* Color de bordes del footer */
+$max-width: 1200px;
+/* Ancho máximo para elementos centrados */
+
+/* Footer */
+$primary-color: #fff;
+$secondary-color: #282828;
+$text-color: #E7EAEF;
+$footer-bg-color: #000;
+$border-color: #fff; /* Cambiado a blanco */
+
+/* Main */
+$primary-color: #fff;
+$secondary-color: #000;
+$text-color: #E7EAEF;
+/* Color de texto para el footer */
+$header-bg-color: rgba(0, 0, 0, 0.6);
+/* Fondo negro semitransparente */
+$footer-bg-color: #000;
+/* Fondo del footer igual al de la página */
+$border-color: #E7EAEF;
+/* Color de bordes del footer */
+$max-width: 1200px;
+/* Ancho máximo para elementos centrados */
+
+/* AboutUs */
+
+/* Movies */
+$primary-color: #fff;
+$secondary-color: #000;
+$text-color: #E7EAEF;
+$categories-bg-color: #333;
+$categories-hover-color: #4d4d4d; // Ajuste manual del color 10% más claro
+$categories-active-color: #4d4d4d;
+$button-bg-color: #444;
+$button-hover-color: #555; // Ajuste manual del color 10% más claro
+$card-bg-color: #444;
+$card-button-bg: #FFD600;
+$card-button-hover: #E6C100; // Ajuste manual del color 10% más oscuro
+$card-border-radius: 10px;
+
+/* DetallePeliculas */
+$detallepeliculas-primary-color: #202020;
+$detallepeliculas-secondary-color: #ffffff;
+$detallepeliculas-accent-color: #007bff;
+$detallepeliculas-rating-color: #f8b400;
+$detallepeliculas-font-family: 'Poppins', Arial, sans-serif;
+$detallepeliculas-button-bg-color: #444;
+$detallepeliculas-button-hover-color: #555;
+$detallepeliculas-accent-color-darkened: #0061cc;  // Un tono más oscuro de azul
+$detallepeliculas-primary-color-lightened: #383838; // Un tono más claro de gris
+
+/* PasarelaPago */
+
+/* ReservaAsiento */
+$verde: #28a745;
+$azul: #007bff;
+$azul-hover: #0056b3; // Color manual para hover
+$rojo: #dc3545;
+$gris: #f8f9fa;
+$primary-color: #202020;
+$button-color: #d3d3d3;
+$text-color: #ffffff; // Blanco para contrastar en el fondo oscuro
+$gap-small: 10px;
+$gap-large: 20px;
+
+/* Ticket */

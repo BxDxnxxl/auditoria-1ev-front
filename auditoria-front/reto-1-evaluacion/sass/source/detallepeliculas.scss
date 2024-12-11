@@ -1,0 +1,196 @@
+/* Variables */
+@import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: $detallepeliculas-font-family;
+  color: $detallepeliculas-secondary-color;
+  background-color: $detallepeliculas-primary-color;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie {
+  &__banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Usamos toda la altura de la pantalla */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+    }
+  }
+
+  &__content {
+    z-index: 2;
+    color: $detallepeliculas-secondary-color;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-left: 15%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+  &__poster {
+    flex: 1;
+    max-width: 300px;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 15px;
+
+      .rating-icon {
+        color: $detallepeliculas-rating-color;
+        font-size: 28px;
+        margin-right: 5px;
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .sessions-button {
+      margin-top: 20px;
+      background-color: $detallepeliculas-accent-color;
+      color: $detallepeliculas-secondary-color;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: $detallepeliculas-accent-color-darkened; // Usamos el color oscuro
+        transform: scale(1.05);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .sessions-container {
+      display: grid; /* Cambia a grid para organización automática */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Define columnas dinámicas */
+      gap: 20px; /* Espaciado entre elementos */
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #444; /* Fondo oscuro para las sesiones */
+      border-radius: 12px; /* Bordes redondeados */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    }
+
+    .sessions-container.hidden {
+      display: none; /* Oculta el contenedor cuando tiene la clase hidden */
+    }
+
+    .session-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centra el contenido de cada tarjeta */
+      justify-content: space-between; /* Espaciado uniforme entre los elementos */
+      background-color: #555; /* Fondo individual de las tarjetas */
+      border-radius: 10px; /* Bordes redondeados */
+      padding: 10px; /* Espaciado interno */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+      color: white;
+      font-size: 14px; /* Tamaño del texto */
+    }
+
+    .session-card button {
+      margin-top: 5px;
+      background-color: $detallepeliculas-accent-color;
+      color: $detallepeliculas-secondary-color;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: $detallepeliculas-accent-color-darkened;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+/* Versiones para pantallas más grandes */
+@media (min-width: 768px) {
+  .movie {
+    &__info {
+      &__title {
+        font-size: 48px;
+        /* Aumenta aún más el tamaño en pantallas grandes */
+      }
+
+      &__rating {
+        font-size: 32px;
+        gap: 16px;
+        /* Espaciado adicional entre íconos y texto */
+      }
+
+      &__ticket-btn {
+        font-size: 20px;
+        /* Botón más destacado */
+        padding: 18px 30px;
+      }
+
+      &__overview-title {
+        font-size: 36px;
+        /* Más grande en pantallas grandes */
+      }
+
+      &__overview {
+        font-size: 22px;
+        /* Texto principal más grande */
+        line-height: 2;
+        /* Más espacio entre líneas */
+      }
+    }
+  }
+}

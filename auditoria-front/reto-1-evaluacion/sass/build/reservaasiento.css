@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Header */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* Footer */
+/* Cambiado a blanco */
+/* Main */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* AboutUs */
+/* Movies */
+/* DetallePeliculas */
+/* PasarelaPago */
+/* ReservaAsiento */
+/* Ticket */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #202020;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que la página ocupe toda la altura de la ventana */
+}
+
+main {
+  flex: 1; /* Empuja el footer al final */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.seating-summary-container {
+  display: flex;
+  flex-direction: column; /* Layout para dispositivos móviles */
+  gap: 15px; /* Espaciado entre elementos */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px; /* Ancho máximo para móviles */
+  padding: 15px; /* Espaciado interno */
+}
+@media screen and (min-width: 768px) {
+  .seating-summary-container {
+    flex-direction: row; /* Cambia a layout horizontal en pantallas medianas */
+    justify-content: space-between;
+    max-width: 1200px;
+    gap: 50px; /* Vuelve al espaciado original */
+    padding: 30px; /* Espaciado más amplio */
+  }
+}
+
+.screen {
+  background-color: #d3d3d3;
+  color: #ffffff;
+  margin: 20px auto;
+  padding: 10px; /* Espaciado reducido */
+  width: 100%;
+  text-align: center;
+  font-size: 12px; /* Tamaño de texto reducido para móviles */
+  font-weight: bold;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .screen {
+    font-size: 16px; /* Tamaño de texto original para desktop */
+    padding: 10px; /* Espaciado original */
+  }
+}
+
+.seating-container {
+  flex: 2; /* Los asientos ocupan más espacio */
+  display: flex;
+  justify-content: center; /* Centra los asientos */
+  margin-top: 15px;
+}
+.seating-container .seating-chart {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Configuración inicial para móviles */
+  gap: 5px; /* Espaciado reducido */
+}
+@media screen and (min-width: 768px) {
+  .seating-container .seating-chart {
+    grid-template-columns: repeat(10, 50px); /* Columnas más grandes para desktop */
+    gap: 10px; /* Espaciado original para desktop */
+  }
+}
+.seating-container .seat {
+  width: 30px; /* Tamaño reducido para móviles */
+  height: 30px; /* Tamaño reducido para móviles */
+  background-color: #28a745;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+.seating-container .seat.ocupado {
+  background-color: #dc3545;
+}
+.seating-container .seat.selected {
+  background-color: #007bff;
+}
+.seating-container .seat.comprado {
+  background-color: #dc3545;
+}
+@media screen and (min-width: 768px) {
+  .seating-container .seat {
+    width: 50px; /* Tamaño original para desktop */
+    height: 50px; /* Tamaño original para desktop */
+  }
+}
+
+.summary {
+  flex: 1; /* El resumen ocupa menos espacio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; /* Espaciado reducido */
+  background-color: #202020;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.summary h2 {
+  font-size: 16px; /* Tamaño reducido para móviles */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .summary h2 {
+    font-size: 20px; /* Tamaño original para desktop */
+  }
+}
+.summary img {
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  max-width: 120px; /* Imagen más pequeña para móviles */
+  height: auto; /* Mantén la proporción de la imagen */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espaciado entre la imagen y el texto */
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .summary img {
+    max-width: 150px; /* Tamaño original para desktop */
+  }
+}
+.summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.summary ul li {
+  font-size: 14px; /* Tamaño reducido para móviles */
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .summary ul li {
+    font-size: 16px; /* Tamaño original para desktop */
+  }
+}
+.summary ul li:last-child {
+  font-weight: bold;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+}
+.summary button {
+  width: 100%; /* Botón se adapta al ancho del contenedor */
+  max-width: 150px; /* Ancho reducido para móviles */
+  padding: 8px; /* Espaciado reducido */
+  font-size: 12px; /* Tamaño reducido para móviles */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.summary button:hover {
+  background-color: #0056b3;
+}
+.summary button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+@media screen and (min-width: 768px) {
+  .summary button {
+    max-width: 200px; /* Ancho original para desktop */
+    padding: 10px; /* Espaciado original */
+    font-size: 14px; /* Tamaño original para desktop */
+  }
+}
+
+/*# sourceMappingURL=reservaasiento.css.map */

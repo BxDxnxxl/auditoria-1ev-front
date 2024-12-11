@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butacoo Home</title>
+    <link rel="stylesheet" href="../sass/build/header.css">
+    <link rel="stylesheet" href="../sass/build/footer.css">
+    <link rel="stylesheet" href="../sass/build/detallepeliculas.css">
+    <script src="../js/movies.js" defer></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../img/icons/LogoButacoo.png" alt="Butacoo Logo">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-links">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="movies.html">Películas</a></li>
+                <li><a href="aboutus.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="header__icons">
+            <button class="icon">
+                <img src="../img/icons/LogIn.png" alt="User Icon">
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Categorías -->
+        <div class="categories">
+            <div class="categories__search">
+                <button id="searchButton" class="categories__button">
+                    <img src="../img/icons/lupa.png" alt="Buscar">
+                </button>
+                <input type="text" id="searchInput" placeholder="Buscar..." class="categories__input">
+            </div>
+            <ul class="categories__list">
+            </ul>
+        </div>
+
+        <!-- Sección de películas -->
+        <section class="movies">
+            <div class="movies__container" id="moviesContainer">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <hr>
+        <br>
+        <div class="footer__credits">
+            <div class="footer__credits__logo">
+                <img src="../img/icons/LogoButacoo.png" alt="Butacoo66 Logo" />
+                <p>Butacoo66</p>
+            </div>
+            <div class="footer__credits__copyright">
+                <p>Designed By Trasti and Daniel</p>
+            </div>
+        </div>
+        <div class="footer__navs">
+            <div class="footer__navs__item"><p>Información de Contacto:</p></div>
+            <div class="footer__navs__item"><p>a26014@svalero.com</p></div>
+            <div class="footer__navs__item"><p>butaco@gmail.com</p></div>
+            <div class="footer__navs__item"><p>a27437@svalero.com</p></div>
+            <div class="footer__navs__item"><p>Sedes disponibles:</p></div>
+            <div class="footer__navs__item"><p>Calle del Coso</p></div>
+            <div class="footer__navs__item"><p>Calle Alfonso I</p></div>
+            <div class="footer__navs__item"><p>Calle de San Vicente de Paúl</p></div>
+        </div>
+    </footer>    
+</body>

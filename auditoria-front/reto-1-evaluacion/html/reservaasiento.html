@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Asientos</title>
+    <link rel="stylesheet" href="../sass/build/header.css">
+    <link rel="stylesheet" href="../sass/build/footer.css">
+    <link rel="stylesheet" href="../sass/build/reservaasiento.css">
+    <script src="../js/reservaasiento.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../img/icons/LogoButacoo.png" alt="Butacoo Logo">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-links">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="movies.html">Películas</a></li>
+                <li><a href="aboutus.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="header__icons">
+            <button class="icon">
+                <img src="../img/icons/LogIn.png" alt="User Icon">
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="seating-summary-container">
+          <div>
+            <div class="screen">Pantalla</div>
+            <div class="seating-container">
+              <div class="seating-chart">
+                <!-- Asientos generados dinámicamente -->   
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <h2>Resumen de la Selección</h2>
+            <ul id="summary-list">
+              <!-- Resumen dinámico -->
+            </ul>
+            <button id="comprarBtn" disabled>Comprar</button>
+            <button id="quitarReserva">quitar reserva</button>
+          </div>
+        </div>
+      </main>
+      
+
+
+    <footer class="footer">
+        <hr>
+        <br>
+        <div class="footer__credits">
+            <div class="footer__credits__logo">
+                <img src="/images/icons/LogoButacoo.png" alt="Butacoo66 Logo" />
+                <p>Butacoo66</p>
+            </div>
+            <div class="footer__credits__copyright">
+                <p>Designed By Trasti and Daniel</p>
+            </div>
+        </div>
+        <div class="footer__navs">
+            <div class="footer__navs__item"><p>Información de Contacto:</p></div>
+            <div class="footer__navs__item"><p>a26014@svalero.com</p></div>
+            <div class="footer__navs__item"><p>butaco@gmail.com</p></div>
+            <div class="footer__navs__item"><p>a27437@svalero.com</p></div>
+            <div class="footer__navs__item"><p>Sedes disponibles:</p></div>
+            <div class="footer__navs__item"><p>Calle del Coso</p></div>
+            <div class="footer__navs__item"><p>Calle Alfonso I</p></div>
+            <div class="footer__navs__item"><p>Calle de San Vicente de Paúl</p></div>
+        </div>
+    </footer>
+</body>
+
+</html>

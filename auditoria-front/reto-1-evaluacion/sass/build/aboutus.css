@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Header */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* Footer */
+/* Cambiado a blanco */
+/* Main */
+/* Color de texto para el footer */
+/* Fondo negro semitransparente */
+/* Fondo del footer igual al de la página */
+/* Color de bordes del footer */
+/* Ancho máximo para elementos centrados */
+/* AboutUs */
+/* Movies */
+/* DetallePeliculas */
+/* PasarelaPago */
+/* ReservaAsiento */
+/* Ticket */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000;
+}
+
+.about-us {
+  padding: 20px;
+}
+.about-us .about-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about-us .about-container p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.about-us .about-container p strong {
+  font-weight: 600;
+}
+.about-us .values-container {
+  margin-top: 20px;
+}
+.about-us .values-container h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-us .values-container .values-list {
+  list-style: none;
+  padding: 0;
+}
+.about-us .values-container .values-list li {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.about-us .values-container .values-list li strong {
+  font-weight: 600;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .about-us {
+    padding: 40px;
+  }
+  .about-us .about-container h1 {
+    font-size: 2.4rem;
+  }
+  .about-us .about-container p {
+    font-size: 1.2rem;
+  }
+  .about-us .values-container h2 {
+    font-size: 2rem;
+  }
+  .about-us .values-container .values-list li {
+    font-size: 1.1rem;
+  }
+}
+
+/*# sourceMappingURL=aboutus.css.map */

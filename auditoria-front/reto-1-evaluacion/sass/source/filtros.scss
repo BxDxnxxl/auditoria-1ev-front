@@ -1,0 +1,173 @@
+/* Variables */
+@import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: $text-color;
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+// Categories (barra lateral)
+.categories {
+    width: 100%;
+    padding: 20px;
+    background-color: $categories-bg-color;
+    text-align: center; // Centra todo el contenido
+
+    &__search {
+        background-color: $categories-hover-color;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 30%;
+        margin: 0 auto; // Centra el buscador
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding-right: 5px;
+            position: relative;
+            top: 5px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        input {
+            border: none;
+            background-color: transparent;
+            color: $text-color;
+            width: 90%;
+
+            &::placeholder {
+                color: #d1d1d1; // Ajuste manual del color del placeholder
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center; // Centra las categorías
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    &__item {
+        background-color: $button-bg-color;
+        padding: 10px;
+        border-radius: 5px;
+        color: $text-color;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $button-hover-color;
+        }
+
+        &.active {
+            background-color: $categories-active-color; // Cambia a un color distintivo
+            border: 2px solid darken($categories-active-color, 10%);
+        }
+    }
+}
+
+
+// Movies Section
+.movies {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    min-height: 650px;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap; // Permite que las cartas salten a una nueva línea automáticamente
+        gap: 100px; // Espaciado entre cartas
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            width: calc((200px * 5) + (100px * 4)); // Ajuste para 5 cartas y 4 gaps
+            max-width: 1600px; // Limitar el ancho máximo del contenedor
+            margin: 0 auto; // Centrar el contenedor
+        }
+    }
+}
+
+// Movie Card
+.movie-card {
+    width: 200px; // Ancho fijo de la carta
+    height: 300px; // Alto fijo de la carta
+    background-color: $card-bg-color;
+    border-radius: $card-border-radius;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__imagen__estandar {
+        width: 180px; // Ocupa todo el ancho de la carta
+        height: 65%; // Imagen ocupa el 60% de la altura total
+        object-fit: cover;
+        border-radius: $card-border-radius $card-border-radius 0 0;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        flex: 1; // Ocupa el espacio restante de la carta
+        margin: 10px 0;
+        font-size: 14px;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button {
+        background-color: $card-button-bg;
+        padding: 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: $card-border-radius;
+        color: black;
+        cursor: pointer;
+        margin-top: auto; // Empuja el botón al final de la carta
+
+        &:hover {
+            background-color: $card-button-hover;
+        }
+    }
+}
+
+// Responsive para desktop
+@media (min-width: 768px) {
+    .movies__container {
+        gap: 100px; // Espaciado uniforme entre las cartas
+    }
+}
